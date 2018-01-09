@@ -89,7 +89,7 @@
 ##### 3.1.3：编写将gitlab备份同步到远程服务器的脚本      
 
   下面脚本查找 本地备份目录下 时间为60分钟之内的，并且后缀为.tar的gitlab备份文件      
-  此日志文件逻辑仍不完善！！！！！
+  此脚本文件逻辑仍不完善！！！！！
 
     cd /root
     vim gitlab_auto_backup_to_remote.sh
@@ -140,7 +140,7 @@
     0 2 * * * root /root/gitlab_auto_backup_to_local.sh -D 1 
 
     #a crontab aboout gitlab backup to remote
-    55 2 * * * root /root/gitlab_auto_backup_to_remote.sh -D 1
+    55 2 * * * root /root/gitlab_auto_backup_to_remote.sh -D 1
     
   
 ##### 3.1.6 重启定时任务
