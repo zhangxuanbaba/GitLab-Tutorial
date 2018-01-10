@@ -2,6 +2,7 @@
 ## GitLab安装
 ## GitLab邮件配置
 ## GitLab汉化
+## GitLab的自动定时备份到远程服务器
 ## GitLab-Runner的linux环境安装
 ## GitLab-Runner的window环境安装
 ## GitLab-CI的.gitlab-ci.yml文件编写
