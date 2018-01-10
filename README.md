@@ -1,2 +1,9 @@
-# markdown
-文档
+# GitLab的安装，配置和使用
+## GitLab安装
+## GitLab邮件配置
+## GitLab汉化
+## GitLab-Runner的linux环境安装
+## GitLab-Runner的window环境安装
+## GitLab-CI的.gitlab-ci.yml文件编写
+## GitLab-CI的自动化发布Maven项目
+## GitLab-CI的自动化发布Vue项目
