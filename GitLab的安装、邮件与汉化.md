@@ -113,7 +113,34 @@ gitlab会让你输入root的密码，登录后重新设置密码，这个密码�
 		gitlab-ctl start
 		
 
-### 6：GitLab的邮件配置
+### 6：GitLab的邮件配置[官方各邮箱配置示例](https://docs.gitlab.com/omnibus/settings/smtp.html "https://docs.gitlab.com/omnibus/settings/smtp.html")
+
+一开始使用163邮箱不成功，无论时25还是465端口都不可以（使用登录密码是授权密码），最后无奈使用gmail，修改/etc/gitlab/gitlab.rb
+
+		gitlab_rails['smtp_enable'] = true
+		gitlab_rails['smtp_address'] = "smtp.gmail.com"
+		gitlab_rails['smtp_port'] = 587
+		gitlab_rails['smtp_user_name'] = "my.email@gmail.com"
+		gitlab_rails['smtp_password'] = "my-gmail-password"
+		gitlab_rails['smtp_domain'] = "smtp.gmail.com"
+		gitlab_rails['smtp_authentication'] = "login"
+		gitlab_rails['smtp_enable_starttls_auto'] = true
+		gitlab_rails['smtp_tls'] = false
+		
+  保存编辑，执行`gitlab-ctl reconfigure`，当配置成功重置后，输入`gitlab-rails console`进入控制台进行测试			
+  在进入控制台后，输入如下命令测试邮件是否可以成功发送		
+
+		Notify.test_email('destination_email@address.com', 'Message Subject', 'Message Body').deliver_now
+		
+一般谷歌邮箱事先没有设置好的话，会报一个`SMTPAuthenticationError`，并且会给你一个地址让你去修改你的[邮箱设置](https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbtD "https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbtD")
+
+		https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbtD
+		
+点击链接登录你的gmail邮箱后，依次点击`Sign-in & security`、`Apps with account access`、将 Allow less secure apps 点击为ON 即可。然后重新测试发送邮件
+
+
+其实gitLab的安装，汉化与邮件可以全部完成后再进行gitlab的配置`gitlab-ctl reconfigure`
+
 ### 7：GitLab找回root密码
 
 
