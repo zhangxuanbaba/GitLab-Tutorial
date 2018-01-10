@@ -113,9 +113,10 @@ gitlab会让你输入root的密码，登录后重新设置密码，这个密码�
 		gitlab-ctl start
 		
 
-### 6：GitLab的邮件配置[官方各邮箱配置示例](https://docs.gitlab.com/omnibus/settings/smtp.html "https://docs.gitlab.com/omnibus/settings/smtp.html")
+### 6：GitLab的邮件配置
+[官方各邮箱配置示例](https://docs.gitlab.com/omnibus/settings/smtp.html "https://docs.gitlab.com/omnibus/settings/smtp.html")
 
-一开始使用163邮箱不成功，无论时25还是465端口都不可以（使用登录密码是授权密码），最后无奈使用gmail，修改/etc/gitlab/gitlab.rb
+一开始使用163邮箱不成功，无论时25还是465端口都不可以（使用登录密码是授权密码），最后无奈使用gmail，修改`/etc/gitlab/gitlab.rb`
 
 		gitlab_rails['smtp_enable'] = true
 		gitlab_rails['smtp_address'] = "smtp.gmail.com"
@@ -141,8 +142,28 @@ gitlab会让你输入root的密码，登录后重新设置密码，这个密码�
 
 其实gitLab的安装，汉化与邮件可以全部完成后再进行gitlab的配置`gitlab-ctl reconfigure`
 
-### 7：GitLab找回root密码
-
+### 7：GitLab找回root密码[参考网址](https://docs.gitlab.com.cn/ce/security/reset_root_password.html "https://docs.gitlab.com.cn/ce/security/reset_root_password.html")
+  如果不慎忘记了root的登录密码，可以通过如下方式重新设置root的登录密码
+  
+  * 以root账户登录gitlab服务器后执行如下命令
+		
+		gitlab-rails console production
+	
+  * 等待片刻后，出现consle，输入下面的命令，会得到root用户
+  		
+		user = User.where(id: 1).first
+		
+  * 设置密码，并确认密码
+  	
+		user.password = 'secret_pass'
+		user.password_confirmation = 'secret_pass'
+	
+  * 保存设置并退出
+  
+  		user.save!
+		exit
+		
+ 
 
 
     
