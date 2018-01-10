@@ -47,7 +47,7 @@
 		external_url "http://xx.xxx.xxx.xxx"
 
 保存退出，执行 `gitlab-ctl reconfigure`，稍后，gitLab服务器就会重新配置成功并启动，此时可以在浏览器输入刚刚设置的地址进行访问，对于低版本的
-gitlab会让你输入root的密码，登录后重新设置密码，这个密码是`root/5iveL!fe`。而对于高版本的gitlab会直接让你设置root的密码，设置成功后即可使用
+gitlab会让你输入root的密码，登录后重新设置密码，这个密码是`5iveL!fe`。而对于高版本的gitlab会直接让你设置root的密码，设置成功后即可使用
 设置的密码登录
 
 
@@ -82,7 +82,7 @@ gitlab会让你输入root的密码，登录后重新设置密码，这个密码�
 		gitlab-ctl reconfigure
 		gitlab-ctl start
 		
-#### 5.2：8-8版本之后的汉化
+#### 5.2：8-8版本之后的汉化[参考网址](http://blog.csdn.net/love8753/article/details/75308652 "http://blog.csdn.net/love8753/article/details/75308652")
 
 ##### 5.2.1：确认gitlab的版本
 
