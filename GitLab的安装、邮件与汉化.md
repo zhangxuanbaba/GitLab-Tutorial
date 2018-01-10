@@ -10,7 +10,7 @@
   * 版本库本地化    
   * 分支建立管理更简便     
 ### 3：GitLab的安装
- * 3.1:安装并配置必要的依赖关系     
+ * 3.1：安装并配置必要的依赖关系     
     
 		sudo yum install curl policycoreutils openssh-server openssh-clients
 		sudo systemctl enable sshd
@@ -52,9 +52,9 @@ gitlab会让你输入root的密码，登录后重新设置密码，这个密码�
 
 
 ### 5：GitLab的汉化
-#### 5.1:8-8版本之前的汉化[参考网址](http://www.21yunwei.com/archives/4351 "http://www.21yunwei.com/archives/4351")
+#### 5.1：8-8版本之前的汉化[参考网址](http://www.21yunwei.com/archives/4351 "http://www.21yunwei.com/archives/4351")
 
-##### 5.1.1:：确认gitlab的版本
+##### 5.1.1：确认gitlab的版本
 	
 		cat /opt/gitlab/embedded/service/gitlab-rails/VERSION
 		
@@ -77,7 +77,7 @@ gitlab会让你输入root的密码，登录后重新设置密码，这个密码�
 		gitlab-ctl stop
 		yes| cp -rf ../gitlab-L-zh/* /opt/gitlab/embedded/service/gitlab-rails/
 		
-##### 5.1.6:重新配置，启动，浏览器访问查看是否汉化成功
+##### 5.1.6：重新配置，启动，浏览器访问查看是否汉化成功
 
 		gitlab-ctl reconfigure
 		gitlab-ctl start
