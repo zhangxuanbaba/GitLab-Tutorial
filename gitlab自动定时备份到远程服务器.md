@@ -15,7 +15,7 @@
 ### 2：自动定时备份到本地
   自动备份到本地其实很简单，只需要两部操作，第一步写一个脚本执行备份操作，第二部配置crontab的定时任务即可
   
-#### 2.1：编写备份脚本文件（我将脚本目录放到了/root下）
+#### 2.1：编写[备份脚本文件](https://pan.baidu.com/s/1pMm7O2B)（我将脚本目录放到了/root下）
 
     cd /root
     vim gitlab_auto_backup_to_local.sh
@@ -86,7 +86,7 @@
   
   然后将B服务器的公钥发送到A服务器，并在A服务器下将B服务器的公钥保存到authorized_keys中（B公钥名称可以cp为id_rsa.pub.backup）     
   
-##### 3.1.3：编写将gitlab备份同步到远程服务器的脚本      
+##### 3.1.3：编写将gitlab[备份同步到远程服务器的脚本](https://pan.baidu.com/s/1i6fY1Qd)      
 
   下面脚本查找 本地备份目录下 时间为60分钟之内的，并且后缀为.tar的gitlab备份文件      
   此脚本文件逻辑仍不完善！！！！！
