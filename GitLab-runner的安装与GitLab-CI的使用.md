@@ -53,7 +53,9 @@
     Please enter the gitlab-ci coordinator URL (e.g. https://gitlab.com )
    
  此处如果是注册GitLab的共享runner，则该URL可GitLab的管理区域找到     
- ![共享runner的url](https://pan.baidu.com/s/1c3IIs1M)
+ ![共享runner的url](https://thumbnail0.baidupcs.com/thumbnail/65bd0ec8283c7dccd8b85b84b9e6e86a?fid=657817638-250528-576206001144792&time=1516003200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-g6BwEL9X0e8OfI4%2F0RVs7y4h3Fg%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=341064877177301546&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video)            
+ 而如果是某个项目特定的runner，可在某个项目中找到
+ ![特定项目的runner的url](https://thumbnail0.baidupcs.com/thumbnail/42125a107c6781fdf62af8a9e5ed8537?fid=657817638-250528-319958236644498&time=1516006800&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-Mkit5nkBsFka2Xly7hq5xhc18f4%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=341146587334679044&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video)
 
 
     
