@@ -107,7 +107,7 @@
  2：如果将mvn package放到一个任务中，将执行打包脚本放到另一个任务中，之前打包好的文件会被清除，造成无法自动发布到tomcat
  3：在runner运行中曾经遇到过 Cannot allocate memory 的错误（没法分配内存），我采取的解决办法是临时更改： echo 1 > /proc/sys/vm/overcommit_memory            
  
- >> #### 4.2:编写自动发布脚本文件
+ >> #### 4.2：编写自动发布脚本文件
  
  如果是单纯的war包项目，只需要将打包好的war包扔到tomcat下即可（建议此tomcat安装文件夹的所有者为gitlab-runner，即使用gitlab-runner用户安装此 tomcat,或安装后更改文件夹所有者）               
  
